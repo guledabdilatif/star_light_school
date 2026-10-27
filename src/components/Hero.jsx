@@ -7,7 +7,7 @@ export default function Hero({ onPick }) {
   return (
     <section className="hero" id="top">
       <div className="container hero-grid">
-        <div>
+        <div className="hero-copy">
           <h1 aria-label="From lower primary to A-Level, under one roof.">
             {["From lower primary", "to A-Level,", "under one roof."].map((line, i) => (
               <span className="line" key={line} aria-hidden="true"><span style={{ "--i": i }}>{line}</span></span>
@@ -29,7 +29,13 @@ export default function Hero({ onPick }) {
             </div>
           </div>
         </div>
-        <img className="hero-logo" src="/logo-dark.png" alt="Star Light Schools crest" />
+
+        {/* Image placeholder: replace src with your student photo */}
+        <div className="hero-visual">
+          <div className="hero-frame">
+            <img className="hero-photo" src="/hero-student.png" alt="A student reading a book" />
+          </div>
+        </div>
       </div>
     </section>
   );
