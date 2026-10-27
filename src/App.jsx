@@ -12,6 +12,7 @@ import EnrolForm from "./components/EnrolForm";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import FloatingActions from "./components/FloatingActions";
+import Fees from "./components/Fees";
 
 export default function App() {
   const [group, setGroup] = useState("primary");
@@ -38,6 +39,7 @@ export default function App() {
       <main>
         <Hero onPick={pick} />
         <Programmes group={group} setGroup={setGroup} highlight={highlight} onEnrol={enrolFor} />
+        <Fees onEnrol={enrolFor} />
         <WhyUs />
         <Admissions />
         <Faq />
