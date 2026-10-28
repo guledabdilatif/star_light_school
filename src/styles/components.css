@@ -242,10 +242,32 @@
 .fab-up { width: 44px; height: 44px; justify-content: center; background: #fff; color: var(--navy); }
 .fab-wa { background: var(--orange); color: var(--navy-deep); padding: .8rem 1.2rem; }
 
+/* About */
+.eyebrow { display: flex; align-items: center; gap: .7rem; margin-bottom: 1rem; font: 600 .8rem var(--body); letter-spacing: .14em; text-transform: uppercase; color: var(--orange-deep); }
+.eyebrow::before { content: ""; width: 28px; height: 2px; background: var(--orange); }
+.about-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 2.5rem 5rem; align-items: start; }
+.about h2 { font-size: clamp(2rem, 4.6vw, 3.2rem); max-width: 16ch; }
+.hl { background: linear-gradient(var(--orange), var(--orange)) 0 92% / 0% .14em no-repeat; transition: background-size .9s var(--ease) .6s; }
+.about-head.in .hl { background-size: 100% .14em; }
+.about-lead { font: 500 1.4rem/1.45 var(--head); color: var(--navy); }
+.about-body { margin-top: 1rem; font-size: 1.05rem; color: var(--muted); }
+.text-link { margin-top: 1.5rem; display: inline-flex; align-items: center; gap: .4rem; padding: 0 0 2px; background: none; border: 0; border-bottom: 2px solid var(--orange); font: 600 1rem var(--body); color: var(--navy); cursor: pointer; }
+.text-link svg { transition: transform .25s var(--ease); }
+.text-link:hover svg { transform: translateX(4px); }
+.about-values { list-style: none; margin: 4rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+.value { position: relative; padding-top: 1.5rem; }
+.value::before, .value::after { content: ""; position: absolute; top: 0; left: 0; height: 2px; }
+.value::before { right: 0; background: #cfd6ea; }
+.value::after { width: 100%; background: var(--orange); transform: scaleX(0); transform-origin: left; transition: transform 1s var(--ease) calc(var(--d, 0ms) + 300ms); }
+.value.in::after { transform: scaleX(.3); }
+.value svg { color: var(--navy); margin-bottom: 1rem; }
+.value h3 { margin-bottom: .4rem; }
+
 @media (max-width: 900px) {
   .why-grid { grid-template-columns: 1fr 1fr; }
   .steps, .faq-wrap, .enrol-grid, .contact-inner, .hero-grid { grid-template-columns: 1fr; }
   .hero-visual { min-height: 420px; margin-top: 1.5rem; }
+    .steps, .faq-wrap, .enrol-grid, .contact-inner, .hero-grid, .about-grid, .about-values { grid-template-columns: 1fr; }
 }
 @media (max-width: 800px) {
   .menu-btn { display: block; }

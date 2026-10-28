@@ -13,6 +13,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import FloatingActions from "./components/FloatingActions";
 import Fees from "./components/Fees";
+import About from "./components/About";
 
 export default function App() {
   const [group, setGroup] = useState("primary");
@@ -24,21 +25,35 @@ export default function App() {
     const p = PROGRAMMES.find((x) => x.id === id);
     setGroup(p.group);
     setHighlight("");
-    requestAnimationFrame(() => { setHighlight(id); scrollToId("programmes"); });
+    requestAnimationFrame(() => {
+      setHighlight(id);
+      scrollToId("programmes");
+    });
     setTimeout(() => setHighlight(""), 2200);
   }, []);
 
   // Programme "Enrol" button: preselect it in the form.
-  const enrolFor = useCallback((title) => { setLevel(title); scrollToId("enrol"); }, []);
+  const enrolFor = useCallback((title) => {
+    setLevel(title);
+    scrollToId("enrol");
+  }, []);
 
   return (
     <>
-      <a href="#programmes" className="skip">Skip to content</a>
+      <a href="#programmes" className="skip">
+        Skip to content
+      </a>
       <ScrollProgress />
       <Header />
       <main>
         <Hero onPick={pick} />
-        <Programmes group={group} setGroup={setGroup} highlight={highlight} onEnrol={enrolFor} />
+        <About />
+        <Programmes
+          group={group}
+          setGroup={setGroup}
+          highlight={highlight}
+          onEnrol={enrolFor}
+        />
         <Fees onEnrol={enrolFor} />
         <WhyUs />
         <Admissions />

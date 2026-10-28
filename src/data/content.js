@@ -26,6 +26,7 @@ export const SCHOOL = {
   address: " Muratina Street, Ground Floor, at Daraja Tower",
 };
 export const NAV = [
+  { id: "about", label: "About" },
   { id: "programmes", label: "Programmes" },
   { id: "fees", label: "Fees" },
   { id: "why-us", label: "Why us" },
@@ -40,6 +41,28 @@ export const GROUPS = [
   { id: "extra", label: "Extra learning" },
 ];
 
+export const ABOUT = {
+  eyebrow: "About us",
+  lead: "Star Light Schools is a place where children, teenagers and adults can study, grow and move forward with confidence.",
+  body: "From a child's first reading lessons to A-Level exams, from English and Kiswahili to IELTS, everything is under one roof at Daraja Tower. We keep things simple: clear programmes, clear fees and a team you can walk in and talk to.",
+  values: [
+    {
+      icon: GraduationCap,
+      title: "One school, every stage",
+      text: "Lower primary, Grades 4 to 8, O-Level and A-Level, so families can stay with one school as their children grow.",
+    },
+    {
+      icon: Globe,
+      title: "Skills that open doors",
+      text: "English, Kiswahili and IELTS training prepare learners for school, work and study abroad.",
+    },
+    {
+      icon: UserRound,
+      title: "Open to adults too",
+      text: "Adult classes give grown-up learners a place to study, catch up and aim higher.",
+    },
+  ],
+};
 export const PROGRAMMES = [
   {
     id: "lower-primary",
