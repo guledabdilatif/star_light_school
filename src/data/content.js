@@ -23,7 +23,7 @@ export const SCHOOL = {
   tel2: "+254723691610",
   whatsapp: "254720567121",
   whatsapp2: "254723691610",
-  address: "Ground Floor, Musalina Street, at Daraja Tower",
+  address: " Muratina Street, Ground Floor, at Daraja Tower",
 };
 export const NAV = [
   { id: "programmes", label: "Programmes" },
@@ -153,7 +153,7 @@ export const FEES = [
   { id: "grades-4-8", price: null },
   { id: "o-level", price: 40000, per: "term" },
   { id: "a-level", price: 60000, per: "term" },
-  { id: "crush", price: 4800, per: "term" },
+  { id: "crush", price: 48000, per: "term" },
   { id: "languages", price: 3000, per: "month" },
   { id: "ielts", price: 5000, per: "month" },
   { id: "adult", price: null },
@@ -173,7 +173,7 @@ export const WHY = [
   {
     icon: MapPin,
     title: "Easy to find",
-    text: "We are on the ground floor at Daraja Tower, Musalina Street.",
+    text: "We are on the ground floor at Daraja Tower, Muratina Street.",
   },
   {
     icon: MessageCircle,
@@ -228,6 +228,6 @@ export const FAQS = [
 
   {
     q: "Where are you located?",
-    a: "Ground Floor, Musalina Street, at Daraja Tower.",
+    a: "Ground Floor, Muratina Street, at Daraja Tower.",
   },
 ];
